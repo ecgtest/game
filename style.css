@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+/* font-family: 'DotGothic16', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+body{
+    background-color: #333333;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23505050' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: 500;
+    color: #dadada;
+}
+
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#builder{
+    position: absolute;     /* később lehet majd fixed */
+    width: 600px;
+    height: 600px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 27.6%;
+}
+
+#b-con{
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-flow: wrap;
+}
+
+.grass{
+    width: 10%;
+}
+
+.grass:hover{
+    filter: brightness(1.15);
+}
+
+#info-container{
+    position: fixed;
+    width: 350px;
+    height: 350px;
+}
+
+#info-holder{
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+#shop-container{
+    position: absolute;    /* position: fixed (később, ha megvan már a shop scrolling) */
+    width: 300px;
+    height: fit-content;
+    right: 0%;
+    padding: 70px 5px 5px 5px;
+    background-image: url('sprites/rock-shop-bg/rock.jpg');
+    background-size: 32px;
+    background-repeat: repeat;
+}
+
+#shop-holder{
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+    width: 100%;
+    height: fit-content;
+}
+
+#info-money{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #555;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#info-click{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #555;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    color: #0D171F;
+}
+
+#info-magyarazo{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #555;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.shop-elem{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #555;
+}
+
+.shop-kep{
+    position: absolute;
+    width: 60px;
+    bottom: 5%;
+    left: 7%;
+    /* border: 1px solid red; */
+}
+
+.termelo-container{
+    position: absolute;
+    width: 55%;
+    height: 60px;
+    display: flex;
+    flex-flow: column wrap;
+    right: 10%;
+    bottom: 5%;
+    /* border: 1px solid aqua; */
+}
+
+.buy{
+    color: #750D10;
+}
+
+.earn{
+    color: #3dc25a;
+}
+
+.use{
+    color: #F5CB53;
+}
+
+.buy, .use, .earn{
+    font-weight: 900;
+}
+
+.nev{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    top: 1%;
+    left: 3%;
+}
+
+
+.shop-txt-bg{
+    position: absolute;
+    width: 100%;
+    height: 32px;
+    background-color: #252525;
+}
+
+.shop-click{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 3px 0 rgba(255, 255, 255, 0.3) inset;
+}
+
+.shop-elem:hover{
+    filter: brightness(0.925);
+}
+
+.shop-click:active{
+    box-shadow: 3px 6px 0px rgba(0, 0, 0, 0.4) inset, -3px -3px 0px rgba(255, 255, 255, 0.2) inset;
+}
+
+#shop-header{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: -65px;
+    background-color: #030303;
+    box-shadow: 2px 3px 0 rgba(255, 255, 255, 0.5) inset;
+    /* border: 1px solid red; */
+}
+
+#shop-nev{
+    position: absolute;
+    top: 10%;
+    left: 51%;
+    transform: translateX(-43.5%);
+    font-size: 2rem;
+    letter-spacing: 2.2rem;
+}
+
+#shop-farm{
+    background-color: #030303;
+    text-align: center;
+    padding: 5px 0px 6px 0px;
+    box-shadow: 2px 3px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+#farm{
+    letter-spacing: 0.2rem;
+    margin-left: 7px;
+}
+
+#shop-generators{
+    background-color: #030303;
+    text-align: center;
+    padding: 5px 0px 6px 0px;
+    box-shadow: 2px 3px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+#generators{
+    letter-spacing: 0.2rem;
+    margin-left: 6px;
+}
+
+.grass:active{
+    filter: brightness(1.0);
+}
+
+.amount-holder{
+    position: absolute;
+    width: 80%;
+    height: 33%;
+    left: 17%;
+    background-color: #F1F4F7;
+    border-radius: 10px;
+    color: #0D171F;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+#money{
+    top: 10%;
+}
+
+#energy{
+    bottom: 10%;
+}
+
+#iconDollar,
+#iconEnergy,
+#iconClick{
+    position: absolute;
+    width: 45px;
+    left: 1%;
+}
+
+#iconDollar{
+    color: #428F42;
+    top: 3%;
+}
+
+#iconEnergy{
+    color: #F5CB53;
+    bottom: 0%;
+}
+
+#iconClick{
+    color: #F1F4F7;
+    top: 3%;
+}
+
+#clickMoney,
+#clickUpg{
+    position: absolute;
+    top: 15%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#clickMoney{
+    width: 30%;
+    background-color: #F1F4F7;
+    left: 17%;
+}
+
+#clickUpg{
+    width: 30%;
+    left: 49%;
+    background-color: #777;
+    box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3) inset;
+}
+
+#clickUpg:active{
+    box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4) inset, -1px -1px 0px rgba(255, 255, 255, 0.2) inset;
+}
+
+#clickUpgPrice{
+    width: 19%;
+    left: 80%;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+}
+
+#magyarazo-flex{
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    width: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3%;
+}
+
+#magyarazo-text{
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    height: 80%;
+    left: 20%;
+    top: 53%;
+    transform: translateY(-50%);
+}
+
+#clickingArea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+#removeContainer{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+}
+
+#removeContainer:hover{
+    cursor: pointer;
+}
+
+#removeContainer:active{
+    filter: brightness(0.7);
+}
+
+#removeHolder{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+#removeBtn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #750D10;
+    border-radius: 0 10px 10px 0;
+    z-index: -1;
+}
+
+#x{
+    padding: 7px 10px 0 5px ;
+}
+
+#mps-icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 2.25%;
+    bottom: 8%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#moneyPSI{
+    width: 80%;
+    height: 33%;
+    border-radius: 10px;
+    position: absolute;
+    left: 17%;
+    bottom: 10%;
+    background-color: #F1F4F7;
+    text-align: center;
+    font-size: 1.3rem;
+}
