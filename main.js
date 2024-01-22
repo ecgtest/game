@@ -394,11 +394,11 @@ setInterval(() => {
     clickUpgg.innerHTML = "$" + clickUpgradePrice;
     moneyPSI.innerHTML = "$" + moneyPerSec;
 
-    //localStorage.setItem('money', money);
-    //localStorage.setItem('energy', energy);                          // ezt a 5öt komment az átíráshoz
-    //localStorage.setItem('click', click);
-    //localStorage.setItem('clickUpgradePrice', clickUpgradePrice);
-    //localStorage.setItem('moneyPerSec', moneyPerSec);
+    localStorage.setItem('money', money);
+    localStorage.setItem('energy', energy);                          // ezt a 5öt komment az átíráshoz
+    localStorage.setItem('click', click);
+    localStorage.setItem('clickUpgradePrice', clickUpgradePrice);
+    localStorage.setItem('moneyPerSec', moneyPerSec);
 
     if (deleteItem > 1) {
         deleteItem = 0;
